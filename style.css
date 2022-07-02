@@ -1,18 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    font-family: 'Patrick Hand', cursive;
 }
 
 main {
     flex: 1;
 }
-/* TEMPORARY BORDERS */
-div {
-    border: 1px solid black;
-}
-/* TEMPORARY BORDERS END*/
 
 .center-container {
     display: flex;
@@ -33,16 +31,15 @@ div {
 
 header {
     text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 9pt;
 }
 
 footer {
     display: flex;
-    justify-content: space-around;
-}
-
-footer > div {
-    display: block;
+    justify-content: space-between;
     height: 12vh;
+    box-sizing: border-box;
 }
 
 .left-bezel,
@@ -51,4 +48,14 @@ header,
 footer {
     background-color: #eb0d0c;
     color: #eef090;
+}
+
+.right-button,
+.left-button {
+    margin: -30px 80px 20px; 
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 50%;
 }
