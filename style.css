@@ -19,7 +19,7 @@ main {
 }
 
 .drawing-box {
-    flex: 2;
+    display: grid;
 }
 
 .center-container > div {
@@ -38,7 +38,7 @@ header {
 footer {
     display: flex;
     justify-content: space-between;
-    height: 12vh;
+    height: 14vh;
     box-sizing: border-box;
 }
 
