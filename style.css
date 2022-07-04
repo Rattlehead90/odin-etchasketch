@@ -20,7 +20,12 @@ main {
 
 .drawing-box {
     display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
+
+.drawing-pixel 
 
 .center-container > div {
     display: block;
