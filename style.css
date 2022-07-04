@@ -1,3 +1,8 @@
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap');
 
 body {
@@ -20,15 +25,18 @@ main {
 
 .drawing-box {
     display: grid;
-    grid-gap: 1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+    flex: auto;
 }
 
-.drawing-pixel 
+.drawing-pixel {
+    padding: 0.1em;
+    border: 1px solid #ddd;
+    text-align: center;
+}
 
 .center-container > div {
-    display: block;
     height: 80vh;
     width: 30vh;
     text-align: center;
