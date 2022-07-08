@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap');
+
+
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap');
 
 body {
     display: flex;
+    font-family: 'Patrick Hand', cursive;
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    font-family: 'Patrick Hand', cursive;
+    background-color: #eb0d0c;
+    color: #eef090;
 }
 
 main {
@@ -56,13 +60,6 @@ footer {
     box-sizing: border-box;
 }
 
-.left-bezel,
-.right-bezel, 
-header,
-footer {
-    background-color: #eb0d0c;
-    color: #eef090;
-}
 
 .right-button,
 .left-button {
@@ -72,17 +69,4 @@ footer {
     height: 100px;
     display: inline-block;
     border-radius: 50%;
-}
-
-.left-bezel,
-.right-bezel {
-    flex: auto;
-}
-
-.left-bezel {
-    margin-right: 120px;
-}
-
-.right-bezel {
-    margin-left: 120px;
 }
