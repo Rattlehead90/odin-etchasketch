@@ -77,21 +77,25 @@ footer {
 /*Dropdown Menu */ 
 
 .left-button:hover,
-.left-button:focus {
+.left-button:focus,
+.right-button:hover,
+.right-button:focus {
     cursor: pointer;
     transition: 0.2s;
     background-color: #eef090;
     color: white;
 }
 
-.left-button:active {
+.left-button:active,
+.right-button:active {
     background-color: #e6e92b;
     transition: none;
     border-radius: 30%;
     color: white;
 }
 
-.left-button:enabled {
+.left-button:enabled,
+.right-button:enabled {
     border-radius: 30%;
 }
 

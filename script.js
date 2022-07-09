@@ -10,7 +10,7 @@ function drawDrawingGrid(size) {
     }
 }
 
-drawDrawingGrid(64);
+drawDrawingGrid(16);
 
 function changeSize(size) {
     drawDrawingGrid(size);
@@ -36,3 +36,37 @@ window.onclick = function(event) {
       }
     }
   }
+
+//Painting logic
+const drawingPixels = document.querySelectorAll('.drawing-pixel');
+
+function paint(color) {
+    for (let i = 0; i < drawingPixels.length; i++) {
+        drawingPixels[i].addEventListener('mouseover', () => {
+            drawingPixels[i].style.backgroundColor = color;
+          })
+    }
+}
+paint('black');
+
+//Color picking logic
+
+const blueOption = document.getElementById('blue');
+blueOption.onclick = () => paint('blue');
+const redOption = document.getElementById('red');
+redOption.onclick = () => paint('red');
+const blackOption = document.getElementById('black');
+blackOption.onclick = () => paint('black');
+
+//Reset logic
+
+function resetDrawingBox() {
+  console.log('it goes up to here');
+  for (let i = 0; i < drawingPixels.length; i++) {
+    drawingPixels[i].style.backgroundColor = 'white';
+  }
+}
+
+const resetButton = document.querySelector('.right-button');
+resetButton.addEventListener('click', () => resetDrawingBox());
+
