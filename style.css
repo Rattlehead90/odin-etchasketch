@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&family=Syne+Mono&display=swap');
 
 
 :root {
@@ -127,3 +127,50 @@ footer {
 }
 
 .show {display:block;}
+
+/*Slider*/
+
+.slider-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    font-family: 'Syne Mono', monospace;
+}
+
+h3 {
+    margin: 5px;
+    font-size: 24pt;
+}
+
+.slider {
+    -webkit-appearance: none;   
+    appearance: none;
+    width: 80%;
+    height: 30px;
+    background: #eef090;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 25px; 
+    height: 25px; 
+    background: #c00b0b; 
+    cursor: pointer; 
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #c00b0b; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }

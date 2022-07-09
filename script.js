@@ -10,10 +10,15 @@ function drawDrawingGrid(size) {
     }
 }
 
+
 drawDrawingGrid(16);
 
 function changeSize(size) {
-    drawDrawingGrid(size);
+  const drawingPixels = document.querySelectorAll('.drawing-pixel');
+  for (let i = 0; i < drawingPixels.length; i++) {
+    drawingBox.removeChild(drawingPixels[i]);
+  }
+  drawDrawingGrid(size);
 } 
 
 //Left button dropdown logic
@@ -38,15 +43,16 @@ window.onclick = function(event) {
   }
 
 //Painting logic
-const drawingPixels = document.querySelectorAll('.drawing-pixel');
 
 function paint(color) {
-    for (let i = 0; i < drawingPixels.length; i++) {
-        drawingPixels[i].addEventListener('mouseover', () => {
-            drawingPixels[i].style.backgroundColor = color;
-          })
-    }
+  const drawingPixels = document.querySelectorAll('.drawing-pixel');
+  for (let i = 0; i < drawingPixels.length; i++) {
+      drawingPixels[i].addEventListener('mouseover', () => {
+          drawingPixels[i].style.backgroundColor = color;
+        })
+  }
 }
+
 paint('black');
 
 //Color picking logic
@@ -61,7 +67,7 @@ blackOption.onclick = () => paint('black');
 //Reset logic
 
 function resetDrawingBox() {
-  console.log('it goes up to here');
+  const drawingPixels = document.querySelectorAll('.drawing-pixel');
   for (let i = 0; i < drawingPixels.length; i++) {
     drawingPixels[i].style.backgroundColor = 'white';
   }
@@ -69,4 +75,16 @@ function resetDrawingBox() {
 
 const resetButton = document.querySelector('.right-button');
 resetButton.addEventListener('click', () => resetDrawingBox());
+
+//Slider logic
+
+const slider = document.getElementById('box-size');
+const output = document.getElementById('demo');
+output.innerHTML = '10x10';
+slider.oninput = function() {
+  output.innerHTML = `${this.value}x${this.value}`;
+  resetDrawingBox();
+  changeSize(this.value);
+  paint('black');
+}
 
