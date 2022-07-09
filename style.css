@@ -33,15 +33,14 @@ main {
 }
 
 .drawing-box {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
 .drawing-pixel {
-    border: 1px solid #ddd;
     background-color: white;
 }
 
@@ -68,4 +67,59 @@ footer {
     height: 100px;
     display: inline-block;
     border-radius: 50%;
+    font-size: 24pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
 }
+
+/*Dropdown Menu */ 
+
+.left-button:hover,
+.left-button:focus {
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #eef090;
+    color: white;
+}
+
+.left-button:active {
+    background-color: #e6e92b;
+    transition: none;
+    border-radius: 30%;
+    color: white;
+}
+
+.left-button:enabled {
+    border-radius: 30%;
+}
+
+.left-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.left-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    margin-left: 185px;
+    margin-top: -50px;
+}
+
+.left-dropdown-content > a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.left-dropdown-content > a:hover {
+    background-color: wheat;
+}
+
+.show {display:block;}
